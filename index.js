@@ -1,16 +1,41 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  wordLenght = word.length;
+ word =word.toLowerCase();
+ if(wordLenght === 1){
+  return true;
+}
+for(let i = 0, j = word.length - 1; i < j; i++, j--){
+
+if(word[i] == word[j]) {
+  return true;
+}
+else{
+
+  return false;
+}
 }
 
+}
+
+
+
+
+
+
+
+
 /* 
-  Add your pseudocode here
+first converts the word to lowercase to ensure case-insensitive comparison. 
+ need to add the  condution of  if out of loop word of lenght 1 
+secound need a loop for each word and  two conter i and j to go throught the word i from the begining of the word j from the end and comparing characher in the word 
 */
 
 /*
   Add written explanation of your solution here
 */
 
-// You can run `node index.js` to view these console logs
+// You can run node index.js to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
